@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Desa Gebang - Siaga Bencana</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#" onclick="window.scrollTo(0,0); return false;" class="nav-brand-link">
+            <div class="nav-brand">
+                <img src="img/logo.png" alt="Logo KKN" class="nav-logo">
+                <h1>SIAGA SUKA AGUNG</h1>
+            </div>
+        </a>
+        
+        <ul>
+            <li><a href="#" onclick="window.scrollTo(0,0); return false;">Beranda</a></li>
+            <li><a href="#peta-lokasi">Peta</a></li>
+            <li><a href="#galeri">Galeri</a></li> <li><a href="#tim">Tim KKN</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        
+        <img src="img/logo.png" alt="Logo Besar" class="hero-logo">
+
+        <h2>PETA ANALISIS DRAINASE<br>& JALUR EVAKUASI<br>MITIGASI BANJIR</h2>
+        <p>Desa Gebang, Dusun Suka Agung<br>Kec. Teluk Pandan, Kab. Pesawaran</p>
+        
+        <div class="weather-hero">
+            <div class="weather-location">
+                📍 DUSUN SUKA AGUNG
+            </div>
+            <div class="weather-main">
+                <h2 id="suhu">--°C</h2>
+                <div class="weather-icon">☁️</div>
+            </div>
+            <p id="kelembaban">Kelembaban: --%</p>
+            <p class="weather-desc">Data Real-time (Live)</p>
+        </div>
+
+        <br>
+        <a href="#peta-lokasi" class="btn-cta">Lihat Peta Situasi ⇩</a>
+
+        <div class="custom-shape-divider-bottom-1678">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <div class="container" id="peta-lokasi">
+        <h3 class="section-title">Peta Analisis & Cuaca Terkini</h3>
+        
+        <div class="map-wrapper">
+            <a href="https://wa.me/6281234567890?text=TOLONG!%20Ada%20keadaan%20darurat%20di%20Dusun%20Suka%20Agung." target="_blank" class="sos-button" title="Panggilan Darurat">
+                🆘 SOS
+            </a>
+            <img src="img/peta_final.jpg" alt="Peta Analisis Drainase & Jalur Evakuasi" class="peta-image">
+        </div>
+        <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9rem;">
+            *Klik gambar untuk memperbesar (Zoom).
+        </p>
+    </div>
+
+    <div class="container" id="galeri" style="background: white; border-radius: 20px;">
+        <h3 class="section-title">Galeri Kegiatan</h3>
+        <p style="text-align: center; margin-bottom: 30px; color: #666;">
+            Dokumentasi Program Kerja KKN Pulau Tegal 2.
+        </p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/random/800x600/?meeting" alt="Diskusi Warga" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/random/800x600/?map" alt="Survei Lokasi" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/random/800x600/?village" alt="Pemasangan Banner" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://source.unsplash.com/random/800x600/?working" alt="Input Data" class="gallery-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="tim">
+        <h3 class="section-title">Anggota KKN Pulau Tegal 2</h3>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://ui-avatars.com/api/?name=Ketua+Kelompok" alt="Ketua">
+                <h5>Nama Ketua</h5>
+                <span>Koordinator Desa</span>
+            </div>
+            <div class="team-member">
+                <img src="https://ui-avatars.com/api/?name=Sekretaris" alt="Anggota">
+                <h5>Nama Anggota</h5>
+                <span>Sekretaris</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 KKN Universitas Lampung - Desa Gebang</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
