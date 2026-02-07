@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebGIS Desa Gebang - Siaga Bencana</title>
     
+    <link rel="icon" href="img/logo.png" type="image/png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,25 +22,23 @@
                 <h1>SIAGA SUKA AGUNG</h1>
             </div>
         </a>
-        
         <ul>
             <li><a href="#" onclick="window.scrollTo(0,0); return false;">Beranda</a></li>
             <li><a href="#peta-lokasi">Peta</a></li>
-            <li><a href="#galeri">Galeri</a></li> <li><a href="#tim">Tim KKN</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#tim">Tim KKN</a></li>
         </ul>
     </nav>
 
     <section class="hero" id="home">
+        <div data-aos="fade-down" data-aos-duration="1000">
+            <img src="img/logo.png" alt="Logo Besar" class="hero-logo">
+            <h2>PETA ANALISIS DRAINASE<br>& JALUR EVAKUASI<br>MITIGASI BANJIR</h2>
+            <p>Desa Gebang, Dusun Suka Agung<br>Kec. Teluk Pandan, Kab. Pesawaran</p>
+        </div>
         
-        <img src="img/logo.png" alt="Logo Besar" class="hero-logo">
-
-        <h2>PETA ANALISIS DRAINASE<br>& JALUR EVAKUASI<br>MITIGASI BANJIR</h2>
-        <p>Desa Gebang, Dusun Suka Agung<br>Kec. Teluk Pandan, Kab. Pesawaran</p>
-        
-        <div class="weather-hero">
-            <div class="weather-location">
-                📍 DUSUN SUKA AGUNG
-            </div>
+        <div class="weather-hero" data-aos="zoom-in" data-aos-delay="300">
+            <div class="weather-location">📍 DUSUN SUKA AGUNG</div>
             <div class="weather-main">
                 <h2 id="suhu">--°C</h2>
                 <div class="weather-icon">☁️</div>
@@ -45,7 +48,9 @@
         </div>
 
         <br>
-        <a href="#peta-lokasi" class="btn-cta">Lihat Peta Situasi ⇩</a>
+        <div data-aos="fade-up" data-aos-delay="600">
+            <a href="#peta-lokasi" class="btn-cta">Lihat Peta Situasi ⇩</a>
+        </div>
 
         <div class="custom-shape-divider-bottom-1678">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -55,67 +60,177 @@
     </section>
 
     <div class="container" id="peta-lokasi">
-        <h3 class="section-title">Peta Analisis & Cuaca Terkini</h3>
+        <h3 class="section-title" data-aos="fade-up">Peta Analisis & Cuaca Terkini</h3>
         
-        <div class="map-wrapper">
-            <a href="https://wa.me/6281234567890?text=TOLONG!%20Ada%20keadaan%20darurat%20di%20Dusun%20Suka%20Agung." target="_blank" class="sos-button" title="Panggilan Darurat">
-                🆘 SOS
+        <div class="map-wrapper" data-aos="zoom-in-up">
+            <a href="https://wa.me/6281234567890?text=TOLONG!%20Ada%20keadaan%20darurat%20di%20Dusun%20Suka%20Agung." target="_blank" class="sos-button" title="Panggilan Darurat">🆘 SOS</a>
+            <img src="img/peta_final.jpg" alt="Peta Analisis Drainase" class="peta-image">
+        </div>
+        <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9rem;">*Klik gambar untuk memperbesar (Zoom).</p>
+
+        <div style="text-align: center; margin-top: 25px;" data-aos="fade-up">
+            <a href="img/peta_final.jpg" download="Peta_Mitigasi_Banjir_Suka_Agung.jpg" class="btn-download">
+                📥 Download Peta (Resolusi Tinggi)
             </a>
-            <img src="img/peta_final.jpg" alt="Peta Analisis Drainase & Jalur Evakuasi" class="peta-image">
         </div>
-        <p style="text-align: center; margin-top: 10px; color: #666; font-size: 0.9rem;">
-            *Klik gambar untuk memperbesar (Zoom).
-        </p>
     </div>
 
-    <div class="container" id="galeri" style="background: white; border-radius: 20px;">
-        <h3 class="section-title">Galeri Kegiatan</h3>
-        <p style="text-align: center; margin-bottom: 30px; color: #666;">
-            Dokumentasi Program Kerja KKN Pulau Tegal 2.
-        </p>
+    <div class="container" style="margin-bottom: 20px;">
+        <h3 class="section-title" data-aos="fade-up">Program Kerja Utama</h3>
+        
+        <div class="proker-grid">
+            <div class="proker-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="proker-icon">🗺️</div>
+                <h4>Pemetaan GIS</h4>
+                <p>Pembuatan peta drainase dan jalur evakuasi berbasis geospasial.</p>
+            </div>
+            
+            <div class="proker-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="proker-icon">📢</div>
+                <h4>Sosialisasi Bencana</h4>
+                <p>Edukasi mitigasi banjir kepada warga dan perangkat desa setempat.</p>
+            </div>
 
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/800x600/?meeting" alt="Diskusi Warga" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/800x600/?map" alt="Survei Lokasi" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/800x600/?village" alt="Pemasangan Banner" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/800x600/?working" alt="Input Data" class="gallery-img">
+            <div class="proker-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="proker-icon">🚩</div>
+                <h4>Pemasangan Rambu</h4>
+                <p>Instalasi rambu jalur evakuasi dan titik kumpul di lokasi strategis.</p>
             </div>
         </div>
     </div>
+
+    <section class="gallery-section" id="galeri">
+        <div class="container-fluid"> 
+            <h3 class="section-title" data-aos="fade-up">Galeri Kegiatan</h3>
+            <p style="margin-bottom: 40px; color: #666;" data-aos="fade-up">
+                Dokumentasi Program Kerja KKN Pulau Tegal 2.
+            </p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="img/kegiatan1.jpg" alt="Kegiatan 1" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="img/kegiatan2.jpg" alt="Kegiatan 2" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="img/kegiatan3.jpg" alt="Kegiatan 3" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400"><img src="img/kegiatan4.jpg" alt="Kegiatan 4" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100"><img src="img/kegiatan5.jpg" alt="Kegiatan 5" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200"><img src="img/kegiatan6.jpg" alt="Kegiatan 6" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300"><img src="img/kegiatan7.jpg" alt="Kegiatan 7" class="gallery-img"></div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400"><img src="img/kegiatan8.jpg" alt="Kegiatan 8" class="gallery-img"></div>
+            </div>
+        </div>
+    </section>
 
     <div class="container" id="tim">
-        <h3 class="section-title">Anggota KKN Pulau Tegal 2</h3>
+        <h3 class="section-title" data-aos="fade-up">Anggota KKN Pulau Tegal 2</h3>
         <div class="team-grid">
-            <div class="team-member">
-                <img src="https://ui-avatars.com/api/?name=Ketua+Kelompok" alt="Ketua">
-                <h5>Nama Ketua</h5>
+            <div class="team-member" data-aos="flip-left">
+                <img src="img/Erico.jpg" alt="Kordes">
+                <h5>Erico Pratama Paringotan S.</h5>
                 <span>Koordinator Desa</span>
             </div>
-            <div class="team-member">
-                <img src="https://ui-avatars.com/api/?name=Sekretaris" alt="Anggota">
-                <h5>Nama Anggota</h5>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+                <img src="img/Talitha.jpg" alt="Sekretaris 1">
+                <h5>Talitha Alifia Qotrinada</h5>
                 <span>Sekretaris</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+                <img src="img/Oca.jpg" alt="Sekretaris 2">
+                <h5>Oca Deswina</h5>
+                <span>Sekretaris</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="300">
+                <img src="img/Lisa.jpg" alt="Bendahara">
+                <h5>Lisa Oktaviani</h5>
+                <span>Bendahara</span>
+            </div>
+            <div class="team-member" data-aos="flip-left">
+                <img src="img/Firman.jpg" alt="PDD 1">
+                <h5>Firman Tri Ambudi</h5>
+                <span>Publikasi & Dok.</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+                <img src="img/Nabila.jpg" alt="PDD 2">
+                <h5>Nabilah Cahya Nurlita </h5>
+                <span>Publikasi & Dok.</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="200">
+                <img src="img/gama.jpg" alt="Humas 1">
+                <h5>Gamaliel Felix Repi</h5>
+                <span>Humas</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="300">
+                <img src="img/Zahra.jpg" alt="Humas 2">
+                <h5>Farah Zahrani</h5>
+                <span>Humas</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="400">
+                <img src="img/topa.jpg" alt="Perkap 1">
+                <h5>Makka Muhammad Mustova</h5>
+                <span>Perlengkapan</span>
+            </div>
+            <div class="team-member" data-aos="flip-left">
+                <img src="img/Panji.jpg" alt="Perkap 2">
+                <h5>Panji Asmoro</h5>
+                <span>Perlengkapan</span>
+            </div>
+            <div class="team-member" data-aos="flip-left" data-aos-delay="100">
+                <img src="img/Diba.jpg" alt="Perkap 3">
+                <h5>Ester Diba R. Simanjuntak</h5>
+                <span>Perlengkapan</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info-section" data-aos="fade-up">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-map">
+                    <h3>Peta Lokasi</h3>
+                    <div class="map-frame">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3971.5034870535316!2d105.22513057498463!3d-5.570166694409951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMzQnMTIuNiJTIDEwNcKwMTMnMzkuOCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak Dusun</h3>
+                    <p>
+                        <strong>Dusun Suka Agung</strong><br>
+                        Desa Gebang, Kec. Teluk Pandan<br>
+                        Kabupaten Pesawaran, Lampung
+                    </p>
+                    <div class="social-label">IKUTI KAMI:</div>
+                    <div class="social-buttons">
+                        <a href="https://www.instagram.com/kkn.pulautegal2/" target="_blank" class="btn-socmed btn-ig">📸 Instagram</a>
+                        <a href="https://www.tiktok.com/@kknpulautegal2" target="_blank" class="btn-socmed btn-tt">🎵 TikTok</a>
+                    </div>
+                    <a href="#" class="btn-profile-desa">Profil Desa Gebang ➜</a>
+                </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 KKN Universitas Lampung - Desa Gebang</p>
+        <p>© 2026 KKN Universitas Lampung - Dikembangkan oleh KKN Pulau Tegal 2.</p>
     </footer>
 
     <div id="myModal" class="modal">
-        <span class="close">&times;</span>
+        <span class="close">×</span>
+        <a class="prev" onclick="gantiSlide(-1)">❮</a>
+        <a class="next" onclick="gantiSlide(1)">❯</a>
         <img class="modal-content" id="img01">
         <div id="caption"></div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 100, duration: 800 });
+    </script>
     <script src="js/script.js"></script>
 </body>
 </html>
