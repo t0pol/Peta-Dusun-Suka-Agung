@@ -15,35 +15,64 @@ async function getCuaca() {
     }
 }
 getCuaca();
-setInterval(getCuaca, 300000); // Auto-update 5 menit
+setInterval(getCuaca, 300000); 
 
-// --- 2. LIGHTBOX ZOOM (PETA & GALERI) ---
+// --- 2. LOGIKA LIGHTBOX & SLIDESHOW ---
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
+var prevBtn = document.querySelector(".prev");
+var nextBtn = document.querySelector(".next");
 
-// Pilih Peta DAN Galeri agar bisa dizoom
-var images = document.querySelectorAll(".peta-image, .gallery-img");
+var galleryImages = document.querySelectorAll(".gallery-img");
+var currentIndex = 0;
 
-images.forEach(function(img) {
-    img.onclick = function(){
+galleryImages.forEach(function(img, index) {
+    img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
+        currentIndex = index;
+        prevBtn.classList.remove("hide-nav");
+        nextBtn.classList.remove("hide-nav");
     }
 });
 
-// Tombol Close
-var span = document.getElementsByClassName("close")[0];
-if(span) {
-    span.onclick = function() { 
-      modal.style.display = "none";
+var petaImg = document.querySelector(".peta-image");
+if(petaImg) {
+    petaImg.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        prevBtn.classList.add("hide-nav");
+        nextBtn.classList.add("hide-nav");
     }
 }
 
-// Klik area hitam = tutup
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+function gantiSlide(n) {
+    currentIndex += n;
+    if (currentIndex >= galleryImages.length) currentIndex = 0;
+    else if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+
+    var nextImg = galleryImages[currentIndex];
+    modalImg.src = nextImg.src;
+    captionText.innerHTML = nextImg.alt;
+    
+    modalImg.style.opacity = 0;
+    setTimeout(function(){ modalImg.style.opacity = 1; }, 100);
 }
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { modal.style.display = "none"; }
+
+window.onclick = function(event) {
+    if (event.target == modal) modal.style.display = "none";
+}
+
+document.addEventListener('keydown', function(event) {
+    if (modal.style.display === "block") {
+        if (event.key === "ArrowLeft" && !prevBtn.classList.contains("hide-nav")) gantiSlide(-1);
+        else if (event.key === "ArrowRight" && !nextBtn.classList.contains("hide-nav")) gantiSlide(1);
+        else if (event.key === "Escape") modal.style.display = "none";
+    }
+});
